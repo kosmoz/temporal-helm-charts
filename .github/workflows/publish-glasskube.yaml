@@ -1,0 +1,20 @@
+name: Publish chart to charts.glasskube.eu
+on:
+  workflow_dispatch:
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Publish Helm chart
+        uses: stefanprodan/helm-gh-pages@master
+        with:
+          token: ${{ secrets.CHARTS_TOKEN }}
+          charts_dir: charts
+          charts_url: https://charts.glasskube.eu
+          owner: glasskube
+          repository: charts.glasskube.eu
+          branch: temporal
+          commit_username: kosmoz
+          commit_email: jakob.steiner@glasskube.eu
