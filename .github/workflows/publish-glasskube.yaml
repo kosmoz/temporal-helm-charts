@@ -15,6 +15,6 @@ jobs:
           charts_url: https://charts.glasskube.eu
           owner: glasskube
           repository: charts.glasskube.eu
-          branch: temporal
+          branch: main
           commit_username: kosmoz
           commit_email: jakob.steiner@glasskube.eu
